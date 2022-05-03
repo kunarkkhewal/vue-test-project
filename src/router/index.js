@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+// import HomeView from '../views/HomeView.vue'
+import homepage from '../components/home.vue';
 
 Vue.use(VueRouter)
 
@@ -8,7 +9,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: homepage
   },
   {
     path: '/login',
@@ -19,7 +20,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/LoginView.vue')
   }
 ]
-const isLogin = false;
+const isLogin = true;
 
 const router = new VueRouter({
   mode: 'history',
