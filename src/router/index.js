@@ -19,7 +19,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/LoginView.vue')
   }
 ]
-const isLogin = false;
+// const isLogin = false;
 
 const router = new VueRouter({
   mode: 'history',
@@ -27,10 +27,10 @@ const router = new VueRouter({
   routes
 })
 
-router.beforeEach((to, from, next) => {
-  if (to.name !== 'Login' && !isLogin) next('/login')
-  else if (to.name == 'Login' && isLogin) next('/login')
-  else next()
-})
+// router.beforeEach((to, from, next) => {
+//   if (to.name !== 'Login' && !isLogin) next('/login')
+//   else if (to.name == 'Login' && isLogin) next('/login')
+//   else next()
+// })
 
 export default router
